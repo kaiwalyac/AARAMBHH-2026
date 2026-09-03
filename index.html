@@ -281,6 +281,11 @@
             border-radius: 30px;
             color: #c6b99f;
             font-size: 11px;
+            transition: border-color .3s, transform .3s;
+        }
+        .event-pill:hover {
+            border-color: rgba(220, 166, 66, .6);
+            transform: translateY(-2px);
         }
         .event-pill span:first-child { color: #d7a33c; }
 
@@ -388,7 +393,7 @@
             border-bottom: 1px solid rgba(190, 126, 22, .14);
         }
 
-        .about, .registration, .activities, .ceremony, .venue, .countdown-section, .modak-section { padding: 120px 0; }
+        .about, .registration, .activities, .ceremony, .venue, .countdown-section, .modak-section, .instagram-section { padding: 120px 0; }
 
         .about-card, .venue-card {
             max-width: 900px;
@@ -527,6 +532,21 @@
             transform: scale(0.96);
         }
 
+        /* INSTAGRAM SECTION */
+        .instagram-section {
+            background: radial-gradient(circle at center, rgba(175, 100, 15, 0.12), transparent 60%);
+        }
+
+        .instagram-card {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 50px 30px;
+            border: 1px solid rgba(220, 166, 66, 0.25);
+            background: rgba(10, 7, 4, 0.65);
+            border-radius: 20px;
+        }
+
         /* COUNTDOWN */
         .countdown-section { background: radial-gradient(circle at center, rgba(137, 52, 4, .13), transparent 60%); }
         .countdown { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
@@ -561,8 +581,8 @@
         .morya { margin-top: 35px; font-family: "Cinzel", serif; color: #e7bd65; letter-spacing: 5px; }
 
         /* FOOTER */
-        footer { padding: 35px 20px; text-align: center; border-top: 1px solid rgba(190, 128, 27, .13); color: #76654e; font-size: 10px; letter-spacing: 2px; }
-        .credit { margin-top: 10px; color: #c18b34; font-family: "Cinzel", serif; }
+        footer { padding: 35px 20px; text-align: center; border-top: 1px solid rgba(190, 128, 27, .13); color: #76654e; font-size: 20px; letter-spacing: 2px; }
+        .credit { margin-top: 15px; color: #c18b34; font-family: "Cinzel", serif; }
 
         /* REVEAL ANIMATION */
         .reveal { opacity: 0; transform: translateY(35px); transition: opacity 1s ease, transform 1s ease; }
@@ -658,7 +678,7 @@
             .hero-logo { width: 310px; }
             .ring-one { width: 350px; height: 350px; }
             .ring-two { width: 430px; height: 430px; }
-            .about-card, .registration-card, .modak-card { padding: 40px 22px; }
+            .about-card, .registration-card, .modak-card, .instagram-card { padding: 40px 22px; }
             .about-card p { font-size: 1.2rem; }
             .activity-card { padding: 30px 20px 30px 88px; }
             .activity-date { left: 17px; }
@@ -711,6 +731,7 @@
         <a href="#modak">Modaks</a>
         <a href="#registration">Registration</a>
         <a href="#venue">Venue</a>
+        <a href="https://www.instagram.com/aarambh_rama_2026?igsi=MXY2M3g2NHdlNGRiOA==" target="_blank" rel="noopener noreferrer">Instagram </a>
     </div>
 
     <button class="blessings" onclick="receiveBlessing()">
@@ -738,7 +759,9 @@
             <div class="event-pills">
                 <div class="event-pill"><span>▣</span><span>14 September 2026</span></div>
                 <div class="event-pill"><span>📍</span><span>Rama Medical College, Hapur</span></div>
-                <div class="event-pill"><span>ॐ</span><span>Ganpati Aagman</span></div>
+                <a href="https://www.instagram.com/aarambh_rama_2026?igsi=MXY2M3g2NHdlNGRiOA==" target="_blank" rel="noopener noreferrer" class="event-pill" style="text-decoration: none;">
+                    <span>🅾</span><span>@aarambh_rama_2026</span>
+                </a>
             </div>
 
             <div class="hero-buttons">
@@ -922,6 +945,21 @@
     </div>
 </section>
 
+<!-- INSTAGRAM SECTION -->
+<section class="instagram-section" id="instagram">
+    <div class="container">
+        <div class="instagram-card reveal">
+            <h2 class="section-title" style="font-size: 2.2rem;">FOLLOW US ON INSTAGRAM</h2>
+            <p style="color: #a99d89; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin: 15px auto 25px; max-width: 600px;">
+               Experience every beautiful moment of our Ganpati celebration — from Bappa’s arrival and sacred ceremonies to joyful activities, cherished memories, photos, videos, and live updates. 🪔✨
+            </p>
+            <a href="https://www.instagram.com/aarambh_rama_2026?igsi=MXY2M3g2NHdlNGRiOA==" target="_blank" rel="noopener noreferrer" class="primary-btn" style="display: inline-flex; width: auto; font-size: 13px;">
+                🅾 Follow @aarambh_rama_2026
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final">
     <div class="container reveal">
@@ -936,7 +974,7 @@
 <!-- FOOTER -->
 <footer>
     AARAMBH 2026 &nbsp; • &nbsp; RAMA MEDICAL COLLEGE, HAPUR
-    <div class="credit">Created by @kaiwalya__ 🔱</div>
+    <div class="credit">"Created by <strong>@kaiwalya__ 🔱</strong>"</div>
 </footer>
 
 <!-- BLESSING POPUP TOAST -->
