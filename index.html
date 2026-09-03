@@ -107,6 +107,28 @@ body{
     border-radius:10px;
 }
 
+/* ================================
+   SECTION SPACING
+================================ */
+
+section {
+    padding: 130px 8%;
+}
+
+section + section {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 90px 6%;
+    }
+
+    section + section {
+        margin-top: 15px;
+    }
+}
+
 
 /* =====================================================
    COMMON
@@ -1642,89 +1664,6 @@ section{
     line-height:1.7;
 
     font-size:14px;
-
-}
-
-
-/* =====================================================
-   MOMENTS
-===================================================== */
-
-.moments{
-
-    padding:120px 0;
-
-}
-
-.moment-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:15px;
-
-}
-
-.moment{
-
-    height:280px;
-
-    position:relative;
-
-    overflow:hidden;
-
-    border:
-        1px solid
-        rgba(205,150,43,.17);
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            rgba(210,145,25,.12),
-            #0b0704
-        );
-
-}
-
-.moment::before{
-
-    content:"ॐ";
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:75px;
-
-    color:
-        rgba(220,166,66,.12);
-
-}
-
-.moment span{
-
-    position:absolute;
-
-    bottom:15px;
-
-    left:18px;
-
-    color:#d4a653;
-
-    font-family:"Cinzel",serif;
-
-    font-size:12px;
-
-    letter-spacing:2px;
 
 }
 
