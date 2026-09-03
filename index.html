@@ -2,4284 +2,1176 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>AARAMBH 2026 | Ganpati Utsav</title>
-
-<meta name="description"
-content="AARAMBH 2026 — Ganpati Utsav at Rama Medical College, Hapur. 14–20 September 2026.">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
-
-
-<style>
-
-/* =====================================================
-   ROOT
-===================================================== */
-
-:root{
-
-    --black:#050403;
-    --black2:#0a0704;
-
-    --gold:#dca642;
-    --gold-light:#f5d889;
-    --gold-dark:#8d5a13;
-
-    --cream:#f5ead0;
-
-    --text:#c9bda8;
-    --muted:#82745f;
-
-    --border:rgba(210,153,49,.25);
-
-}
-
-
-/* =====================================================
-   RESET
-===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-
-    background:
-
-    radial-gradient(
-        circle at 70% 25%,
-        rgba(121,54,8,.10),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at 30% 80%,
-        rgba(103,43,7,.08),
-        transparent 30%
-    ),
-
-    var(--black);
-
-    color:white;
-
-    font-family:"Montserrat",sans-serif;
-
-    overflow-x:hidden;
-
-}
-
-
-/* =====================================================
-   SCROLLBAR
-===================================================== */
-
-::-webkit-scrollbar{
-    width:7px;
-}
-
-::-webkit-scrollbar-track{
-    background:#050403;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#8c5d18;
-    border-radius:10px;
-}
-
-/* =====================================================
-   COMMON
-===================================================== */
-
-.container{
-
-    width:min(1180px,90%);
-
-    margin:auto;
-
-}
-
-section{
-    position:relative;
-}
-
-.gold{
-    color:var(--gold);
-}
-
-.section-title{
-
-    font-family:"Cinzel",serif;
-
-    font-size:
-        clamp(2.2rem,5vw,4rem);
-
-    font-weight:500;
-
-    text-align:center;
-
-    letter-spacing:3px;
-
-    color:var(--gold-light);
-
-}
-
-.section-subtitle{
-
-    max-width:700px;
-
-    margin:18px auto 55px;
-
-    text-align:center;
-
-    color:#a99b82;
-
-    line-height:1.8;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.35rem;
-
-}
-
-.gold-line{
-
-    width:120px;
-
-    height:1px;
-
-    margin:20px auto;
-
-    background:
-
-    linear-gradient(
-        90deg,
-        transparent,
-        var(--gold),
-        transparent
-    );
-
-}
-
-
-/* =====================================================
-   LOADER
-===================================================== */
-
-#loader{
-
-    position:fixed;
-
-    inset:0;
-
-    background:#030201;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-direction:column;
-
-    z-index:99999;
-
-    transition:
-        opacity 1s ease,
-        visibility 1s ease;
-
-}
-
-#loader.hide{
-
-    opacity:0;
-
-    visibility:hidden;
-
-}
-
-.loader-symbol{
-
-    width:70px;
-
-    height:70px;
-
-    border-radius:50%;
-
-    border:
-        1px solid
-        rgba(220,166,66,.3);
-
-    border-top:
-        2px solid
-        var(--gold);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    animation:
-        loaderSpin 2s linear infinite;
-
-}
-
-.loader-symbol span{
-
-    font-size:28px;
-
-    color:var(--gold);
-
-}
-
-.loader-text{
-
-    margin-top:20px;
-
-    font-family:"Cinzel",serif;
-
-    font-size:10px;
-
-    letter-spacing:5px;
-
-    color:#b99145;
-
-}
-
-@keyframes loaderSpin{
-
-    to{
-        transform:rotate(360deg);
-    }
-
-}
-
-
-/* =====================================================
-   PARTICLES
-===================================================== */
-
-#particles{
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    z-index:1;
-
-}
-
-.particle{
-
-    position:absolute;
-
-    width:2px;
-
-    height:2px;
-
-    border-radius:50%;
-
-    background:#dca642;
-
-    box-shadow:
-        0 0 8px
-        rgba(220,166,66,.8);
-
-    opacity:.3;
-
-    animation:
-        particleFloat
-        linear infinite;
-
-}
-
-@keyframes particleFloat{
-
-    from{
-
-        transform:
-            translateY(105vh)
-            scale(.5);
-
-        opacity:0;
-
-    }
-
-    20%{
-        opacity:.6;
-    }
-
-    80%{
-        opacity:.25;
-    }
-
-    to{
-
-        transform:
-            translateY(-10vh)
-            scale(1.2);
-
-        opacity:0;
-
-    }
-
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.top-nav{
-
-    position:absolute;
-
-    top:22px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:min(1500px,84%);
-
-    height:70px;
-
-    border:
-        1px solid
-        rgba(178,122,34,.35);
-
-    border-radius:28px;
-
-    background:
-        rgba(9,6,4,.75);
-
-    backdrop-filter:blur(14px);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:0 28px;
-
-    z-index:1000;
-
-}
-
-
-/* BRAND */
-
-.nav-brand{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:13px;
-
-}
-
-.brand-logo{
-
-    width:47px;
-
-    height:47px;
-
-    border-radius:50%;
-
-    border:
-        1px solid
-        rgba(207,150,45,.6);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--gold);
-
-    font-size:24px;
-
-}
-
-.brand-text{
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.brand-text small{
-
-    font-family:"Cinzel",serif;
-
-    color:#b58b43;
-
-    font-size:9px;
-
-    letter-spacing:4px;
-
-}
-
-.brand-text strong{
-
-    font-family:"Cinzel",serif;
-
-    color:#eee0bd;
-
-    font-size:17px;
-
-    letter-spacing:3px;
-
-}
-
-
-/* NAV LINKS */
-
-.nav-links{
-
-    display:flex;
-
-    gap:35px;
-
-}
-
-.nav-links a{
-
-    color:#b9ae99;
-
-    text-decoration:none;
-
-    font-size:13px;
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover{
-
-    color:var(--gold-light);
-
-}
-
-
-/* BLESSINGS */
-
-.blessings{
-
-    border:
-        1px solid
-        rgba(210,153,49,.6);
-
-    background:
-        rgba(81,46,9,.3);
-
-    color:#e6c474;
-
-    padding:13px 21px;
-
-    border-radius:30px;
-
-    cursor:pointer;
-
-    font-family:"Montserrat",sans-serif;
-
-    font-size:12px;
-
-    transition:.3s;
-
-}
-
-.blessings:hover{
-
-    background:
-        linear-gradient(
-            135deg,
-            #d9a33d,
-            #9b6416
-        );
-
-    color:#130a02;
-
-    transform:translateY(-2px);
-
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero{
-
-    min-height:100vh;
-
-    overflow:hidden;
-
-    display:flex;
-
-    align-items:center;
-
-    background:
-
-        radial-gradient(
-            circle at 72% 50%,
-            rgba(117,54,8,.18),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 48% 100%,
-            rgba(99,37,4,.12),
-            transparent 30%
-        );
-
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        radial-gradient(
-            circle at center,
-            transparent 0 40%,
-            rgba(0,0,0,.45) 100%
-        );
-
-    pointer-events:none;
-
-}
-
-.hero-container{
-
-    width:min(1500px,84%);
-
-    margin:auto;
-
-    min-height:100vh;
-
-    display:grid;
-
-    grid-template-columns:52% 48%;
-
-    align-items:center;
-
-    position:relative;
-
-    z-index:5;
-
-}
-
-
-/* =====================================================
-   HERO LEFT
-===================================================== */
-
-.hero-left{
-
-    padding-top:80px;
-
-}
-
-.college-label{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    color:#b28a46;
-
-    font-family:"Cinzel",serif;
-
-    font-size:10px;
-
-    letter-spacing:5px;
-
-    margin-bottom:32px;
-
-}
-
-.college-label span{
-
-    width:55px;
-
-    height:1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #bd8023,
-            transparent
-        );
-
-}
-
-.sanskrit{
-
-    color:#c99a42;
-
-    font-size:14px;
-
-    margin-bottom:17px;
-
-}
-
-
-/* TITLE */
-
-.hero-title{
-
-    font-family:"Cinzel",serif;
-
-    font-weight:500;
-
-    line-height:.87;
-
-    letter-spacing:-4px;
-
-}
-
-.hero-title span{
-
-    display:block;
-
-}
-
-.hero-title .first{
-
-    font-size:
-        clamp(4.5rem,8vw,7.8rem);
-
-    color:#fff2d4;
-
-}
-
-.hero-title .second{
-
-    font-size:
-        clamp(4.5rem,8vw,7.8rem);
-
-    background:
-        linear-gradient(
-            180deg,
-            #ffd879,
-            #b66d12
-        );
-
-    -webkit-background-clip:text;
-
-    color:transparent;
-
-}
-
-
-/* DESCRIPTION */
-
-.hero-description{
-
-    max-width:650px;
-
-    margin-top:43px;
-
-    color:#b7aa94;
-
-    line-height:1.9;
-
-    font-size:14px;
-
-}
-
-.hero-description strong{
-
-    color:#d9ad58;
-
-}
-
-
-/* EVENT PILLS */
-
-.event-pills{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin-top:40px;
-
-}
-
-.event-pill{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:9px;
-
-    border:
-        1px solid
-        rgba(183,126,31,.3);
-
-    background:
-        rgba(13,8,4,.55);
-
-    padding:11px 15px;
-
-    border-radius:30px;
-
-    color:#c6b99f;
-
-    font-size:11px;
-
-}
-
-.event-pill span:first-child{
-
-    color:#d7a33c;
-
-}
-
-
-/* HERO BUTTONS */
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:22px;
-
-    margin-top:50px;
-
-}
-
-.primary-btn,
-.secondary-btn{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:9px;
-
-    padding:15px 25px;
-
-    border-radius:30px;
-
-    text-decoration:none;
-
-    font-size:12px;
-
-    transition:.35s;
-
-}
-
-.primary-btn{
-
-    color:#180c02;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f1bd52,
-            #a96512
-        );
-
-    box-shadow:
-        0 12px 35px
-        rgba(194,123,20,.18);
-
-}
-
-.primary-btn:hover{
-
-    transform:translateY(-3px);
-
-}
-
-.secondary-btn{
-
-    color:#d9a843;
-
-    border:
-        1px solid
-        #956319;
-
-}
-
-.secondary-btn:hover{
-
-    background:
-        rgba(161,103,18,.1);
-
-    transform:translateY(-3px);
-
-}
-
-
-/* =====================================================
-   HERO RIGHT LOGO
-===================================================== */
-
-.hero-right{
-
-    position:relative;
-
-    height:100%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding-top:55px;
-   margin-top:80px;
-   min-height: 420px;
-}
-
-.logo-glow{
-
-    position:absolute;
-
-    width:590px;
-
-    height:590px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(221,139,19,.22),
-            rgba(111,48,5,.08) 42%,
-            transparent 70%
-        );
-
-    filter:blur(8px);
-
-    animation:
-        logoPulse 5s ease-in-out infinite;
-
-}
-
-@keyframes logoPulse{
-
-    0%,100%{
-
-        transform:scale(.95);
-
-        opacity:.6;
-
-    }
-
-    50%{
-
-        transform:scale(1.06);
-
-        opacity:1;
-
-    }
-
-}
-
-
-/* LOGO */
-
-.hero-logo{
-
-    position:relative;
-
-    width:min(570px,90%);
-
-    height:auto;
-
-    z-index:5;
-
-    filter:
-
-        drop-shadow(
-            0 0 15px
-            rgba(255,185,55,.8)
-        )
-
-        drop-shadow(
-            0 0 50px
-            rgba(219,109,5,.35)
-        );
-
-    animation:
-        logoFloat 6s ease-in-out infinite;
-
-}
-
-@keyframes logoFloat{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-12px);
-    }
-
-}
-
-
-/* RINGS */
-
-.logo-ring{
-
-    position:absolute;
-
-    border-radius:50%;
-
-    border:
-        1px solid
-        rgba(180,121,28,.13);
-
-}
-
-.ring-one{
-
-    width:590px;
-
-    height:590px;
-
-    animation:
-        rotate 40s linear infinite;
-
-}
-
-.ring-two{
-
-    width:710px;
-
-    height:710px;
-
-    border-style:dashed;
-
-    opacity:.3;
-
-    animation:
-        rotateReverse 65s linear infinite;
-
-}
-
-@keyframes rotate{
-
-    to{
-        transform:rotate(360deg);
-    }
-
-}
-
-@keyframes rotateReverse{
-
-    to{
-        transform:rotate(-360deg);
-    }
-
-}
-
-
-/* =====================================================
-   SCROLL
-===================================================== */
-
-.scroll-indicator{
-
-    position:absolute;
-
-    bottom:13px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    color:#756246;
-
-    font-size:8px;
-
-    letter-spacing:5px;
-
-    z-index:10;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:8px;
-
-}
-
-.scroll-line{
-
-    width:1px;
-
-    height:30px;
-
-    background:
-        linear-gradient(
-            #9f7229,
-            transparent
-        );
-
-}
-
-
-/* =====================================================
-   MANTRA
-===================================================== */
-
-.mantra{
-
-    padding:18px;
-
-    text-align:center;
-
-    color:#d5a54d;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:19px;
-
-    letter-spacing:5px;
-
-    background:#100804;
-
-    border-top:
-        1px solid
-        rgba(190,126,22,.14);
-
-    border-bottom:
-        1px solid
-        rgba(190,126,22,.14);
-
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about{
-
-    padding:120px 0;
-
-}
-
-.about-card{
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:60px 55px;
-
-    text-align:center;
-
-    border:
-        1px solid
-        rgba(207,151,44,.18);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(219,154,40,.035),
-            rgba(0,0,0,.2)
-        );
-
-}
-
-.about-card p{
-
-    color:#c2b49c;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.45rem;
-
-    line-height:1.75;
-
-}
-
-
-/* =====================================================
-   REGISTRATION SECTION
-===================================================== */
-
-.registration{
-
-    padding:120px 0;
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            rgba(155,91,10,.13),
-            transparent 60%
-        );
-
-}
-
-.registration-card{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-    padding:70px 45px;
-
-    border:
-        1px solid
-        rgba(220,166,66,.28);
-
-    background:
-
-        linear-gradient(
-            145deg,
-            rgba(52,30,7,.25),
-            rgba(5,4,3,.75)
-        );
-
-    box-shadow:
-        0 0 70px
-        rgba(165,102,18,.06);
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.registration-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-
-    height:300px;
-
-    border-radius:50%;
-
-    background:
-        rgba(211,151,37,.07);
-
-    filter:blur(50px);
-
-    top:-150px;
-
-    right:-100px;
-
-}
-
-.registration-symbol{
-
-    font-size:45px;
-
-    color:#e3b252;
-
-    margin-bottom:20px;
-
-}
-
-.registration-card h2{
-
-    font-family:"Cinzel",serif;
-
-    font-size:
-        clamp(2rem,5vw,3.5rem);
-
-    color:#f0d38e;
-
-    letter-spacing:2px;
-
-}
-
-.registration-card p{
-
-    max-width:650px;
-
-    margin:20px auto 30px;
-
-    color:#afa18b;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.35rem;
-
-    line-height:1.7;
-
-}
-
-.register-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:12px;
-
-    padding:17px 35px;
-
-    border-radius:35px;
-
-    text-decoration:none;
-
-    color:#160b02;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #f3c35b,
-            #ad6812
-        );
-
-    font-size:13px;
-
-    font-weight:600;
-
-    box-shadow:
-        0 15px 40px
-        rgba(190,119,18,.2);
-
-    transition:.35s;
-
-}
-
-.register-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 20px 50px
-        rgba(190,119,18,.35);
-
-}
-
-.registration-note{
-
-    margin-top:18px !important;
-
-    font-size:11px !important;
-
-    color:#75674f !important;
-
-    font-family:"Montserrat",sans-serif !important;
-
-}
-
-
-/* =====================================================
-   ACTIVITIES SECTION
-===================================================== */
-
-.activities{
-
-    padding:120px 0;
-
-}
-
-.activities-grid{
-
-    max-width:1000px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:18px;
-
-}
-
-.activity-card{
-
-    position:relative;
-
-    padding:32px 28px 32px 95px;
-
-    min-height:145px;
-
-    border:
-        1px solid
-        rgba(205,150,43,.18);
-
-    background:
-        rgba(13,8,4,.55);
-
-    transition:.4s;
-
-    overflow:hidden;
-
-}
-
-.activity-card:hover{
-
-    transform:translateY(-5px);
-
-    border-color:
-        rgba(220,166,66,.45);
-
-    box-shadow:
-        0 15px 45px
-        rgba(126,72,10,.08);
-
-}
-
-.activity-date{
-
-    position:absolute;
-
-    left:22px;
-
-    top:31px;
-
-    width:54px;
-
-    height:54px;
-
-    border-radius:50%;
-
-    border:
-        1px solid
-        rgba(218,164,59,.5);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-direction:column;
-
-    color:#e0af54;
-
-    font-family:"Cinzel",serif;
-
-}
-
-.activity-date .day{
-
-    font-size:18px;
-
-    line-height:1;
-
-}
-
-.activity-date .month{
-
-    font-size:7px;
-
-    letter-spacing:1px;
-
-    margin-top:4px;
-
-}
-
-.activity-card h3{
-
-    font-family:"Cinzel",serif;
-
-    color:#e4b65b;
-
-    font-size:16px;
-
-    letter-spacing:1px;
-
-    margin-bottom:9px;
-
-}
-
-.activity-card p{
-
-    color:#a99d89;
-
-    font-size:12px;
-
-    line-height:1.7;
-
-}
-
-.activity-badge{
-
-    display:inline-block;
-
-    margin-top:12px;
-
-    padding:5px 10px;
-
-    border:
-        1px solid
-        rgba(208,150,43,.2);
-
-    border-radius:20px;
-
-    color:#8e7956;
-
-    font-size:8px;
-
-    letter-spacing:1px;
-
-}
-
-
-/* =====================================================
-   COUNTDOWN
-===================================================== */
-
-.countdown-section{
-
-    padding:110px 0;
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            rgba(137,52,4,.13),
-            transparent 60%
-        );
-
-}
-
-.countdown{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-}
-
-.time-box{
-
-    width:140px;
-
-    padding:28px 10px;
-
-    text-align:center;
-
-    border:
-        1px solid
-        rgba(207,151,44,.22);
-
-    background:
-        rgba(7,5,3,.7);
-
-}
-
-.time-number{
-
-    font-family:"Cinzel",serif;
-
-    font-size:42px;
-
-    color:#e8b957;
-
-}
-
-.time-label{
-
-    margin-top:7px;
-
-    font-size:9px;
-
-    letter-spacing:3px;
-
-    color:#84735a;
-
-}
-
-
-/* =====================================================
-   CEREMONY
-===================================================== */
-
-.ceremony{
-
-    padding:120px 0;
-
-}
-
-.timeline{
-
-    max-width:800px;
-
-    margin:auto;
-
-    position:relative;
-
-}
-
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:28px;
-
-    top:0;
-
-    bottom:0;
-
-    width:1px;
-
-    background:
-
-        linear-gradient(
-            transparent,
-            #956319,
-            transparent
-        );
-
-}
-
-.timeline-item{
-
-    display:flex;
-
-    gap:30px;
-
-    margin:45px 0;
-
-    position:relative;
-
-}
-
-.timeline-icon{
-
-    min-width:57px;
-
-    width:57px;
-
-    height:57px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#0b0704;
-
-    border:
-        1px solid
-        #946119;
-
-    color:#dba744;
-
-    z-index:2;
-
-}
-
-.timeline-content h3{
-
-    font-family:"Cinzel",serif;
-
-    color:#e0b155;
-
-    margin-bottom:9px;
-
-}
-
-.timeline-content p{
-
-    color:#a99d89;
-
-    line-height:1.7;
-
-    font-size:14px;
-
-}
-
-
-/* =====================================================
-   QUOTE
-===================================================== */
-
-.quote{
-
-    padding:140px 0;
-
-    text-align:center;
-
-}
-
-.quote-text{
-
-    max-width:850px;
-
-    margin:auto;
-
-    font-family:"Cormorant Garamond",serif;
-
-    color:#e8d8b8;
-
-    font-size:
-        clamp(
-            1.8rem,
-            4vw,
-            3rem
-        );
-
-    line-height:1.5;
-
-}
-
-.quote-text strong{
-
-    color:#e3ad4b;
-
-}
-
-
-/* =====================================================
-   VENUE
-===================================================== */
-
-.venue{
-
-    padding:120px 0;
-
-}
-
-.venue-card{
-
-    max-width:850px;
-
-    margin:auto;
-
-    padding:60px 30px;
-
-    text-align:center;
-
-    border:
-        1px solid
-        rgba(210,151,42,.2);
-
-}
-
-.venue-icon{
-
-    font-size:42px;
-
-    margin-bottom:20px;
-
-}
-
-.venue-card h3{
-
-    color:#e2b354;
-
-    font-family:"Cinzel",serif;
-
-    font-size:25px;
-
-    letter-spacing:2px;
-
-    margin-bottom:15px;
-
-}
-
-.venue-card p{
-
-    color:#a99b85;
-
-    line-height:1.8;
-
-}
-
-.map-btn{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:13px 25px;
-
-    color:#e0ae52;
-
-    border:
-        1px solid
-        #98661b;
-
-    border-radius:30px;
-
-    text-decoration:none;
-
-    font-size:11px;
-
-    letter-spacing:2px;
-
-}
-
-
-/* =====================================================
-   FINAL
-===================================================== */
-
-.final{
-
-    min-height:650px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    background:
-
-        radial-gradient(
-            circle at center,
-            rgba(139,55,5,.17),
-            transparent 60%
-        );
-
-}
-
-.final-symbol{
-
-    font-size:70px;
-
-    color:#dfa94a;
-
-    filter:
-        drop-shadow(
-            0 0 25px
-            rgba(224,163,56,.35)
-        );
-
-}
-
-.final h2{
-
-    margin-top:20px;
-
-    font-family:"Cinzel",serif;
-
-    font-size:
-        clamp(
-            2.2rem,
-            5vw,
-            4.5rem
-        );
-
-    color:#f1cf7d;
-
-}
-
-.final p{
-
-    max-width:650px;
-
-    margin:22px auto;
-
-    color:#b5a78f;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.4rem;
-
-    line-height:1.7;
-
-}
-
-.morya{
-
-    margin-top:35px;
-
-    font-family:"Cinzel",serif;
-
-    color:#e7bd65;
-
-    letter-spacing:5px;
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    padding:35px 20px;
-
-    text-align:center;
-
-    border-top:
-        1px solid
-        rgba(190,128,27,.13);
-
-    color:#76654e;
-
-    font-size:10px;
-
-    letter-spacing:2px;
-
-}
-
-.credit{
-
-    margin-top:10px;
-
-    color:#c18b34;
-
-    font-family:"Cinzel",serif;
-
-}
-
-
-/* =====================================================
-   REVEAL ANIMATION
-===================================================== */
-
-.reveal{
-
-    opacity:0;
-
-    transform:
-        translateY(35px);
-
-    transition:
-        opacity 1s ease,
-        transform 1s ease;
-
-}
-
-.reveal.show{
-
-    opacity:1;
-
-    transform:none;
-
-}
-
-
-/* =====================================================
-   BLESSING POPUP
-===================================================== */
-
-.blessing-popup{
-
-    position:fixed;
-
-    left:50%;
-
-    bottom:30px;
-
-    transform:
-        translate(-50%,30px);
-
-    background:
-        rgba(18,10,4,.95);
-
-    border:
-        1px solid
-        rgba(218,163,60,.5);
-
-    padding:18px 28px;
-
-    border-radius:12px;
-
-    color:#e9c16b;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:18px;
-
-    z-index:9999;
-
-    opacity:0;
-
-    pointer-events:none;
-
-    transition:.5s;
-
-}
-
-.blessing-popup.active{
-
-    opacity:1;
-
-    transform:
-        translate(-50%,0);
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:1000px){
-
-    .top-nav{
-
-        width:92%;
-
-    }
-
-    .nav-links{
-
-        display:none;
-
-    }
-
-    .hero-container{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-        padding-top:120px;
-
-    }
-
-    .hero-left{
-
-        padding-top:30px;
-
-    }
-
-    .hero-right{
-
-        min-height:470px;
-
-    }
-
-    .college-label{
-
-        justify-content:center;
-
-    }
-
-    .hero-description{
-
-        margin-left:auto;
-
-        margin-right:auto;
-
-    }
-
-    .event-pills,
-    .hero-buttons{
-
-        justify-content:center;
-
-    }
-
-    .hero-logo{
-
-        width:400px;
-
-    }
-
-    .activities-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .moment-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-}
-
-
-@media(max-width:600px){
-
-    .top-nav{
-
-        top:12px;
-
-        height:62px;
-
-        padding:0 15px;
-
-        border-radius:20px;
-
-    }
-
-    .brand-logo{
-
-        width:40px;
-
-        height:40px;
-
-    }
-
-    .brand-text small{
-
-        font-size:8px;
-
-    }
-
-    .brand-text strong{
-
-        font-size:15px;
-
-    }
-
-    .blessings{
-
-        padding:10px 13px;
-
-        font-size:0;
-
-    }
-
-    .blessings span{
-
-        font-size:16px;
-
-    }
-
-    .hero-container{
-
-        width:90%;
-
-    }
-
-    .hero-title .first,
-    .hero-title .second{
-
-        font-size:
-            clamp(
-                3.5rem,
-                17vw,
-                5rem
-            );
-
-        letter-spacing:-2px;
-
-    }
-
-    .college-label{
-
-        font-size:7px;
-
-        letter-spacing:3px;
-
-    }
-
-    .hero-description{
-
-        font-size:12px;
-
-        line-height:1.8;
-
-    }
-
-    .event-pill{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-    }
-
-    .primary-btn,
-    .secondary-btn{
-
-        justify-content:center;
-
-    }
-
-    .hero-right{
-
-        min-height:350px;
-
-    }
-
-    .hero-logo{
-
-        width:310px;
-
-    }
-
-    .ring-one{
-
-        width:350px;
-
-        height:350px;
-
-    }
-
-    .ring-two{
-
-        width:430px;
-
-        height:430px;
-
-    }
-
-    .about-card{
-
-        padding:40px 22px;
-
-    }
-
-    .about-card p{
-
-        font-size:1.2rem;
-
-    }
-
-    .registration-card{
-
-        padding:50px 22px;
-
-    }
-
-    .activity-card{
-
-        padding:
-            30px
-            20px
-            30px
-            88px;
-
-    }
-
-    .activity-date{
-
-        left:17px;
-
-    }
-
-    .countdown{
-
-        gap:8px;
-
-    }
-
-    .time-box{
-
-        width:46%;
-
-    }
-
-    .time-number{
-
-        font-size:32px;
-
-    }
-
-    .moment-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .moment{
-
-        height:240px;
-
-    }
-
-}
-
-
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
-
-a:focus-visible,
-button:focus-visible{
-
-    outline:
-        2px solid
-        var(--gold-light);
-
-    outline-offset:4px;
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARAMBH 2026 | Ganpati Utsav</title>
+    <meta name="description" content="AARAMBH 2026 — Ganpati Utsav at Rama Medical College, Hapur. 14–20 September 2026.">
+
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           ROOT & RESET
+        ===================================================== */
+        :root {
+            --black: #050403;
+            --black2: #0a0704;
+            --gold: #dca642;
+            --gold-light: #f5d889;
+            --gold-dark: #8d5a13;
+            --cream: #f5ead0;
+            --text: #c9bda8;
+            --muted: #82745f;
+            --border: rgba(210, 153, 49, .25);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 70% 25%, rgba(121, 54, 8, .10), transparent 30%),
+                radial-gradient(circle at 30% 80%, rgba(103, 43, 7, .08), transparent 30%),
+                var(--black);
+            color: #ffffff;
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* =====================================================
+           SCROLLBAR
+        ===================================================== */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: #050403; }
+        ::-webkit-scrollbar-thumb { background: #8c5d18; border-radius: 10px; }
+
+        /* =====================================================
+           COMMON UTILITIES
+        ===================================================== */
+        .container { width: min(1180px, 90%); margin: auto; }
+        section { position: relative; }
+        .gold { color: var(--gold); }
+        .gold-line {
+            width: 120px;
+            height: 1px;
+            margin: 20px auto;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .section-title {
+            font-family: "Cinzel", serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 3px;
+            color: var(--gold-light);
+        }
+
+        .section-subtitle {
+            max-width: 700px;
+            margin: 18px auto 55px;
+            text-align: center;
+            color: #a99b82;
+            line-height: 1.8;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.35rem;
+        }
+
+        /* =====================================================
+           LOADER
+        ===================================================== */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #030201;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 99999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-symbol {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid rgba(220, 166, 66, .3);
+            border-top: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: loaderSpin 2s linear infinite;
+        }
+
+        .loader-symbol span { font-size: 28px; color: var(--gold); }
+        .loader-text {
+            margin-top: 20px;
+            font-family: "Cinzel", serif;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #b99145;
+        }
+
+        @keyframes loaderSpin { to { transform: rotate(360deg); } }
+
+        /* =====================================================
+           PARTICLES CANVAS
+        ===================================================== */
+        #particleCanvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+        .top-nav {
+            position: fixed;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(1500px, 84%);
+            height: 70px;
+            border: 1px solid rgba(178, 122, 34, .35);
+            border-radius: 28px;
+            background: rgba(9, 6, 4, .85);
+            backdrop-filter: blur(14px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            z-index: 1000;
+        }
+
+        .nav-brand { display: flex; align-items: center; gap: 13px; }
+        .brand-logo {
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            border: 1px solid rgba(207, 150, 45, .6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 24px;
+        }
+
+        .brand-text { display: flex; flex-direction: column; }
+        .brand-text small { font-family: "Cinzel", serif; color: #b58b43; font-size: 9px; letter-spacing: 4px; }
+        .brand-text strong { font-family: "Cinzel", serif; color: #eee0bd; font-size: 17px; letter-spacing: 3px; }
+
+        .nav-links { display: flex; gap: 35px; }
+        .nav-links a {
+            color: #b9ae99;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color .3s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+
+        .blessings {
+            border: 1px solid rgba(210, 153, 49, .6);
+            background: rgba(81, 46, 9, .3);
+            color: #e6c474;
+            padding: 11px 21px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            transition: all .3s ease;
+        }
+
+        .blessings:hover {
+            background: linear-gradient(135deg, #d9a33d, #9b6416);
+            color: #130a02;
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+        .hero {
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 72% 50%, rgba(117, 54, 8, .18), transparent 30%),
+                radial-gradient(circle at 48% 100%, rgba(99, 37, 4, .12), transparent 30%);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 0 40%, rgba(0, 0, 0, .45) 100%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            width: min(1500px, 84%);
+            margin: auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 52% 48%;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero-left { padding-top: 80px; will-change: transform; }
+        .college-label {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #b28a46;
+            font-family: "Cinzel", serif;
+            font-size: 10px;
+            letter-spacing: 5px;
+            margin-bottom: 32px;
+        }
+
+        .college-label span {
+            width: 55px;
+            height: 1px;
+            background: linear-gradient(90deg, #bd8023, transparent);
+        }
+
+        .sanskrit { color: #c99a42; font-size: 14px; margin-bottom: 17px; }
+        .hero-title { font-family: "Cinzel", serif; font-weight: 500; line-height: .87; letter-spacing: -4px; }
+        .hero-title span { display: block; }
+        .hero-title .first { font-size: clamp(4.5rem, 8vw, 7.8rem); color: #fff2d4; }
+        .hero-title .second {
+            font-size: clamp(4.5rem, 8vw, 7.8rem);
+            background: linear-gradient(180deg, #ffd879, #b66d12);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description { max-width: 650px; margin-top: 43px; color: #b7aa94; line-height: 1.9; font-size: 14px; }
+        .hero-description strong { color: #d9ad58; }
+
+        .event-pills { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 40px; }
+        .event-pill {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            border: 1px solid rgba(183, 126, 31, .3);
+            background: rgba(13, 8, 4, .55);
+            padding: 11px 15px;
+            border-radius: 30px;
+            color: #c6b99f;
+            font-size: 11px;
+        }
+        .event-pill span:first-child { color: #d7a33c; }
+
+        .hero-buttons { display: flex; gap: 22px; margin-top: 50px; }
+        .primary-btn, .secondary-btn {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 12px;
+            transition: .35s;
+        }
+
+        .primary-btn {
+            color: #180c02;
+            background: linear-gradient(135deg, #f1bd52, #a96512);
+            box-shadow: 0 12px 35px rgba(194, 123, 20, .18);
+            font-weight: 600;
+        }
+        .primary-btn:hover { transform: translateY(-3px); }
+
+        .secondary-btn { color: #d9a843; border: 1px solid #956319; }
+        .secondary-btn:hover { background: rgba(161, 103, 18, .1); transform: translateY(-3px); }
+
+        /* HERO RIGHT */
+        .hero-right {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 55px;
+            margin-top: 80px;
+            min-height: 420px;
+        }
+
+        .logo-glow {
+            position: absolute;
+            width: 590px;
+            height: 590px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(221, 139, 19, .22), rgba(111, 48, 5, .08) 42%, transparent 70%);
+            filter: blur(8px);
+            animation: logoPulse 5s ease-in-out infinite;
+        }
+
+        @keyframes logoPulse {
+            0%, 100% { transform: scale(.95); opacity: .6; }
+            50% { transform: scale(1.06); opacity: 1; }
+        }
+
+        .hero-logo {
+            position: relative;
+            width: min(570px, 90%);
+            height: auto;
+            z-index: 5;
+            filter: drop-shadow(0 0 15px rgba(255, 185, 55, .8)) drop-shadow(0 0 50px rgba(219, 109, 5, .35));
+            animation: logoFloat 6s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .logo-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(180, 121, 28, .13); }
+        .ring-one { width: 590px; height: 590px; animation: rotate 40s linear infinite; }
+        .ring-two { width: 710px; height: 710px; border-style: dashed; opacity: .3; animation: rotateReverse 65s linear infinite; }
+
+        @keyframes rotate { to { transform: rotate(360deg); } }
+        @keyframes rotateReverse { to { transform: rotate(-360deg); } }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 13px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #756246;
+            font-size: 8px;
+            letter-spacing: 5px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .scroll-line { width: 1px; height: 30px; background: linear-gradient(#9f7229, transparent); }
+
+        /* =====================================================
+           SECTIONS & CARDS
+        ===================================================== */
+        .mantra {
+            padding: 18px;
+            text-align: center;
+            color: #d5a54d;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 19px;
+            letter-spacing: 5px;
+            background: #100804;
+            border-top: 1px solid rgba(190, 126, 22, .14);
+            border-bottom: 1px solid rgba(190, 126, 22, .14);
+        }
+
+        .about, .registration, .activities, .ceremony, .venue, .countdown-section, .modak-section { padding: 120px 0; }
+
+        .about-card, .venue-card {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 55px;
+            text-align: center;
+            border: 1px solid rgba(207, 151, 44, .18);
+            background: linear-gradient(135deg, rgba(219, 154, 40, .035), rgba(0, 0, 0, .2));
+        }
+
+        .about-card p { color: #c2b49c; font-family: "Cormorant Garamond", serif; font-size: 1.45rem; line-height: 1.75; }
+
+        /* REGISTRATION */
+        .registration { background: radial-gradient(circle at center, rgba(155, 91, 10, .13), transparent 60%); }
+        .registration-card {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 70px 45px;
+            border: 1px solid rgba(220, 166, 66, .28);
+            background: linear-gradient(145deg, rgba(52, 30, 7, .25), rgba(5, 4, 3, .75));
+            box-shadow: 0 0 70px rgba(165, 102, 18, .06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .registration-symbol { font-size: 45px; color: #e3b252; margin-bottom: 20px; }
+        .registration-card h2 { font-family: "Cinzel", serif; font-size: clamp(2rem, 5vw, 3.5rem); color: #f0d38e; letter-spacing: 2px; }
+        .registration-card p { max-width: 650px; margin: 20px auto 30px; color: #afa18b; font-family: "Cormorant Garamond", serif; font-size: 1.35rem; line-height: 1.7; }
+
+        .register-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 17px 35px;
+            border-radius: 35px;
+            text-decoration: none;
+            color: #160b02;
+            background: linear-gradient(135deg, #f3c35b, #ad6812);
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 15px 40px rgba(190, 119, 18, .2);
+            transition: .35s;
+        }
+        .register-btn:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(190, 119, 18, .35); }
+        .registration-note { margin-top: 18px !important; font-size: 11px !important; color: #75674f !important; font-family: "Montserrat", sans-serif !important; }
+
+        /* ACTIVITIES */
+        .activities-grid { max-width: 1000px; margin: auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .activity-card {
+            position: relative;
+            padding: 32px 28px 32px 95px;
+            min-height: 145px;
+            border: 1px solid rgba(205, 150, 43, .18);
+            background: rgba(13, 8, 4, .55);
+            transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+        }
+
+        .activity-card:hover { transform: translateY(-5px); border-color: rgba(220, 166, 66, .45); box-shadow: 0 15px 45px rgba(126, 72, 10, .08); }
+        .activity-date {
+            position: absolute;
+            left: 22px;
+            top: 31px;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 1px solid rgba(218, 164, 59, .5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #e0af54;
+            font-family: "Cinzel", serif;
+        }
+        .activity-date .day { font-size: 18px; line-height: 1; }
+        .activity-date .month { font-size: 7px; letter-spacing: 1px; margin-top: 4px; }
+        .activity-card h3 { font-family: "Cinzel", serif; color: #e4b65b; font-size: 16px; letter-spacing: 1px; margin-bottom: 9px; }
+        .activity-card p { color: #a99d89; font-size: 12px; line-height: 1.7; }
+        .activity-badge { display: inline-block; margin-top: 12px; padding: 5px 10px; border: 1px solid rgba(208, 150, 43, .2); border-radius: 20px; color: #8e7956; font-size: 8px; letter-spacing: 1px; }
+
+        /* MODAK COUNTER SECTION */
+        .modak-section {
+            background: radial-gradient(circle at center, rgba(160, 95, 12, 0.15), transparent 65%);
+        }
+
+        .modak-card {
+            max-width: 650px;
+            margin: auto;
+            padding: 50px 35px;
+            text-align: center;
+            border: 1px solid rgba(220, 166, 66, 0.3);
+            background: rgba(10, 7, 4, 0.7);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .modak-icon {
+            font-size: 55px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .modak-count-display {
+            font-family: "Cinzel", serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            color: var(--gold-light);
+            margin: 15px 0;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(220, 166, 66, 0.3);
+        }
+
+        .modak-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border: 1px solid var(--gold);
+            background: linear-gradient(135deg, #f1bd52, #a96512);
+            color: #160b02;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .modak-btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 25px rgba(220, 166, 66, 0.4);
+        }
+
+        .modak-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* COUNTDOWN */
+        .countdown-section { background: radial-gradient(circle at center, rgba(137, 52, 4, .13), transparent 60%); }
+        .countdown { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        .time-box { width: 140px; padding: 28px 10px; text-align: center; border: 1px solid rgba(207, 151, 44, .22); background: rgba(7, 5, 3, .7); }
+        .time-number { font-family: "Cinzel", serif; font-size: 42px; color: #e8b957; }
+        .time-label { margin-top: 7px; font-size: 9px; letter-spacing: 3px; color: #84735a; }
+
+        /* CEREMONY */
+        .timeline { max-width: 800px; margin: auto; position: relative; }
+        .timeline::before { content: ""; position: absolute; left: 28px; top: 0; bottom: 0; width: 1px; background: linear-gradient(transparent, #956319, transparent); }
+        .timeline-item { display: flex; gap: 30px; margin: 45px 0; position: relative; }
+        .timeline-icon { min-width: 57px; width: 57px; height: 57px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #0b0704; border: 1px solid #946119; color: #dba744; z-index: 2; }
+        .timeline-content h3 { font-family: "Cinzel", serif; color: #e0b155; margin-bottom: 9px; }
+        .timeline-content p { color: #a99d89; line-height: 1.7; font-size: 14px; }
+
+        /* QUOTE */
+        .quote { padding: 140px 0; text-align: center; }
+        .quote-text { max-width: 850px; margin: auto; font-family: "Cormorant Garamond", serif; color: #e8d8b8; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.5; }
+        .quote-text strong { color: #e3ad4b; }
+
+        /* VENUE */
+        .venue-icon { font-size: 42px; margin-bottom: 20px; }
+        .venue-card h3 { color: #e2b354; font-family: "Cinzel", serif; font-size: 25px; letter-spacing: 2px; margin-bottom: 15px; }
+        .venue-card p { color: #a99b85; line-height: 1.8; }
+        .map-btn { display: inline-block; margin-top: 30px; padding: 13px 25px; color: #e0ae52; border: 1px solid #98661b; border-radius: 30px; text-decoration: none; font-size: 11px; letter-spacing: 2px; }
+
+        /* FINAL CTA */
+        .final { min-height: 650px; display: flex; align-items: center; justify-content: center; text-align: center; background: radial-gradient(circle at center, rgba(139, 55, 5, .17), transparent 60%); }
+        .final-symbol { font-size: 70px; color: #dfa94a; filter: drop-shadow(0 0 25px rgba(224, 163, 56, .35)); }
+        .final h2 { margin-top: 20px; font-family: "Cinzel", serif; font-size: clamp(2.2rem, 5vw, 4.5rem); color: #f1cf7d; }
+        .final p { max-width: 650px; margin: 22px auto; color: #b5a78f; font-family: "Cormorant Garamond", serif; font-size: 1.4rem; line-height: 1.7; }
+        .morya { margin-top: 35px; font-family: "Cinzel", serif; color: #e7bd65; letter-spacing: 5px; }
+
+        /* FOOTER */
+        footer { padding: 35px 20px; text-align: center; border-top: 1px solid rgba(190, 128, 27, .13); color: #76654e; font-size: 10px; letter-spacing: 2px; }
+        .credit { margin-top: 10px; color: #c18b34; font-family: "Cinzel", serif; }
+
+        /* REVEAL ANIMATION */
+        .reveal { opacity: 0; transform: translateY(35px); transition: opacity 1s ease, transform 1s ease; }
+        .reveal.show { opacity: 1; transform: none; }
+
+        /* BLESSING POPUP */
+        .blessing-popup {
+            position: fixed;
+            left: 50%;
+            bottom: 30px;
+            transform: translate(-50%, 30px);
+            background: rgba(18, 10, 4, .95);
+            border: 1px solid rgba(218, 163, 60, .5);
+            padding: 18px 28px;
+            border-radius: 12px;
+            color: #e9c16b;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 18px;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .5s ease, transform .5s ease;
+            text-align: center;
+        }
+
+        .blessing-popup.active { opacity: 1; transform: translate(-50%, 0); }
+
+        /* MUSIC BUTTON */
+        #musicBtn {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 99999;
+            padding: 13px 20px;
+            border: 1px solid rgba(220, 166, 66, 0.65);
+            border-radius: 30px;
+            background: rgba(12, 7, 3, 0.94);
+            color: #e5b65b;
+            backdrop-filter: blur(12px);
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        #musicBtn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #eab74f, #a86715);
+            color: #160b02;
+            box-shadow: 0 8px 30px rgba(220, 166, 66, 0.35);
+        }
+
+        #musicBtn.playing {
+            color: #f5d889;
+            animation: musicGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes musicGlow {
+            0%, 100% { box-shadow: 0 5px 25px rgba(0,0,0,0.45), 0 0 10px rgba(220,166,66,0.12); }
+            50% { box-shadow: 0 5px 25px rgba(0,0,0,0.45), 0 0 28px rgba(220,166,66,0.35); }
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1000px) {
+            .top-nav { width: 92%; }
+            .nav-links { display: none; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; padding-top: 120px; }
+            .hero-left { padding-top: 30px; }
+            .hero-right { min-height: 470px; }
+            .college-label { justify-content: center; }
+            .hero-description { margin-left: auto; margin-right: auto; }
+            .event-pills, .hero-buttons { justify-content: center; }
+            .hero-logo { width: 400px; }
+            .activities-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .top-nav { top: 12px; height: 62px; padding: 0 15px; border-radius: 20px; }
+            .brand-logo { width: 40px; height: 40px; }
+            .brand-text small { font-size: 8px; }
+            .brand-text strong { font-size: 15px; }
+            .blessings { padding: 10px 13px; font-size: 11px; }
+            .hero-container { width: 90%; }
+            .hero-title .first, .hero-title .second { font-size: clamp(3.5rem, 17vw, 5rem); letter-spacing: -2px; }
+            .college-label { font-size: 7px; letter-spacing: 3px; }
+            .hero-description { font-size: 12px; line-height: 1.8; }
+            .event-pill { width: 100%; justify-content: center; }
+            .hero-buttons { flex-direction: column; }
+            .primary-btn, .secondary-btn { justify-content: center; }
+            .hero-right { min-height: 350px; }
+            .hero-logo { width: 310px; }
+            .ring-one { width: 350px; height: 350px; }
+            .ring-two { width: 430px; height: 430px; }
+            .about-card, .registration-card, .modak-card { padding: 40px 22px; }
+            .about-card p { font-size: 1.2rem; }
+            .activity-card { padding: 30px 20px 30px 88px; }
+            .activity-date { left: 17px; }
+            .time-box { width: 46%; }
+            .time-number { font-size: 32px; }
+            #musicBtn { right: 15px; bottom: 15px; padding: 11px 16px; font-size: 11px; }
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--gold-light);
+            outline-offset: 4px;
+        }
+    </style>
 </head>
 
-
 <body>
-   
-<!-- =========================================
-     AARAMBH 2026 BACKGROUND MUSIC
-========================================= -->
 
-<audio
-    id="bgMusic"
-    autoplay
-    loop
-    preload="auto"
-    playsinline
->
+<!-- AUDIO PLAYER -->
+<audio id="bgMusic" loop preload="auto" playsinline>
     <source src="./music/aarambh.mp3" type="audio/mpeg">
 </audio>
 
-<button id="musicBtn" type="button">
-    🎵 <span>Starting Music...</span>
+<button id="musicBtn" type="button" aria-label="Toggle Music">
+    🎵 <span>Enable Music</span>
 </button>
 
-<style>
-/* MUSIC BUTTON */
-#musicBtn {
-    position: fixed;
-    right: 22px;
-    bottom: 22px;
-    z-index: 99999;
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+    <div class="loader-symbol"><span>ॐ</span></div>
+    <div class="loader-text">ENTERING AARAMBH</div>
+</div>
 
-    padding: 13px 20px;
+<!-- PERFORMANCE CANVAS PARTICLES -->
+<canvas id="particleCanvas"></canvas>
 
-    border: 1px solid rgba(220,166,66,0.65);
-    border-radius: 30px;
+<!-- NAVIGATION -->
+<nav class="top-nav" aria-label="Main Navigation">
+    <div class="nav-brand">
+        <div class="brand-logo" aria-hidden="true">ॐ</div>
+        <div class="brand-text">
+            <small>AARAMBH</small>
+            <strong>2026</strong>
+        </div>
+    </div>
 
-    background: rgba(12,7,3,0.94);
-    color: #e5b65b;
+    <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#ceremony">Ceremony</a>
+        <a href="#activities">Activities</a>
+        <a href="#modak">Modaks</a>
+        <a href="#registration">Registration</a>
+        <a href="#venue">Venue</a>
+    </div>
 
-    backdrop-filter: blur(12px);
+    <button class="blessings" onclick="receiveBlessing()">
+        <span>🙏</span> Receive Blessings
+    </button>
+</nav>
 
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-left reveal">
+            <div class="college-label">
+                <span></span> RAMA MEDICAL COLLEGE • HAPUR
+            </div>
+            <div class="sanskrit">|| श्री गणेशाय नमः ||</div>
+            <h1 class="hero-title">
+                <span class="first">GANPATI</span>
+                <span class="second">AAGMAN</span>
+            </h1>
+            <p class="hero-description">
+                A sacred beginning to <strong>AARAMBH 2026.</strong>
+                Join the Rama Medical College family as we welcome Vighnaharta with devotion, joy and togetherness.
+            </p>
 
-    cursor: pointer;
+            <div class="event-pills">
+                <div class="event-pill"><span>▣</span><span>14 September 2026</span></div>
+                <div class="event-pill"><span>📍</span><span>Rama Medical College, Hapur</span></div>
+                <div class="event-pill"><span>ॐ</span><span>Ganpati Aagman</span></div>
+            </div>
 
-    box-shadow:
-        0 5px 25px rgba(0,0,0,0.45);
+            <div class="hero-buttons">
+                <a href="#registration" class="primary-btn">🙏 Register Now</a>
+                <a href="#activities" class="secondary-btn">◷ View Activities</a>
+            </div>
+        </div>
 
-    transition:
-        all 0.3s ease;
-}
+        <div class="hero-right">
+            <div class="logo-glow"></div>
+            <div class="logo-ring ring-one"></div>
+            <div class="logo-ring ring-two"></div>
+            <img src="aarambh-logo.png" alt="AARAMBH 2026 Golden Logo" class="hero-logo">
+        </div>
+    </div>
 
-#musicBtn:hover {
-    transform: translateY(-3px);
+    <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
 
-    background:
-        linear-gradient(
-            135deg,
-            #eab74f,
-            #a86715
-        );
+<!-- MANTRA BANNER -->
+<div class="mantra">|| GANPATI BAPPA MORYA ||</div>
 
-    color: #160b02;
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title reveal">A Sacred Beginning</h2>
+        <div class="gold-line"></div>
+        <div class="about-card reveal">
+            <p>For all of us, Ganpati Bappa is not just a festival — it is an emotion, a tradition, and a beautiful reminder of home.</p>
+            <br>
+            <p><span class="gold">AARAMBH 2026</span> marks the beginning of a beautiful Ganeshotsav tradition at Rama Medical College, Hapur.</p>
+            <br>
+            <p>From the arrival of Bappa to the final Visarjan, let us celebrate every moment with devotion, unity and joy.</p>
+        </div>
+    </div>
+</section>
 
-    box-shadow:
-        0 8px 30px rgba(220,166,66,0.35);
-}
+<!-- REGISTRATION -->
+<section class="registration" id="registration">
+    <div class="container">
+        <div class="registration-card reveal">
+            <div class="registration-symbol">🪔</div>
+            <h2>Be A Part of Aarambh</h2>
+            <div class="gold-line"></div>
+            <p>Register now and be a part of <strong class="gold">AARAMBH 2026</strong>. Join us in celebrating Ganpati Bappa with devotion, creativity and togetherness.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbVBMI_Y1_38JKzi2AtFIe1BvkDADPFYlqyY5q0fgwmWQ_eA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="register-btn">
+                📝 REGISTER NOW
+            </a>
+            <p class="registration-note">Registration will open in a new tab.</p>
+        </div>
+    </div>
+</section>
 
-#musicBtn.playing {
-    color: #f5d889;
+<!-- ACTIVITIES -->
+<section class="activities" id="activities">
+    <div class="container">
+        <h2 class="section-title reveal">Activities & Events</h2>
+        <p class="section-subtitle reveal">Seven days. One celebration. Countless memories with Bappa.</p>
 
-    box-shadow:
-        0 5px 25px rgba(0,0,0,0.45),
-        0 0 20px rgba(220,166,66,0.18);
+        <div class="activities-grid">
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">14</span><span class="month">SEP</span></div>
+                <h3>Ganpati Aagman</h3>
+                <p>The auspicious beginning of AARAMBH 2026 as we welcome Ganpati Bappa to Rama Medical College, Hapur.</p>
+                <span class="activity-badge">STHAPANA</span>
+            </div>
 
-    animation:
-        musicGlow 2s ease-in-out infinite;
-}
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">15</span><span class="month">SEP</span></div>
+                <h3>Rangoli Competition</h3>
+                <p>Showcase creativity, colours and artistic expression through a Ganeshotsav-themed Rangoli competition.</p>
+                <span class="activity-badge">ALL BATCHES</span>
+            </div>
 
-@keyframes musicGlow {
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">16</span><span class="month">SEP</span></div>
+                <h3>Musical Chair</h3>
+                <p>A fun-filled musical chair competition featuring 15 chairs and plenty of festive energy.</p>
+                <span class="activity-badge">PGs & UGs • ALL BATCHES</span>
+            </div>
 
-    0%,
-    100% {
-        box-shadow:
-            0 5px 25px rgba(0,0,0,0.45),
-            0 0 10px rgba(220,166,66,0.12);
-    }
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">17</span><span class="month">SEP</span></div>
+                <h3>Storytelling</h3>
+                <p>Share stories, imagination and expressions as we celebrate the spirit of Ganpati through words.</p>
+                <span class="activity-badge">STORYTELLING EVENT</span>
+            </div>
 
-    50% {
-        box-shadow:
-            0 5px 25px rgba(0,0,0,0.45),
-            0 0 28px rgba(220,166,66,0.35);
-    }
-}
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">18</span><span class="month">SEP</span></div>
+                <h3>Cultural Events</h3>
+                <p>An evening of dance, singing, poetry and diverse cultural performances.</p>
+                <span class="activity-badge">DANCE • SINGING • POETRY</span>
+            </div>
 
-@media (max-width:600px) {
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">19</span><span class="month">SEP</span></div>
+                <h3>Maha Aarti</h3>
+                <p>Come together as one college family for the sacred Maha Aarti and seek Bappa's blessings.</p>
+                <span class="activity-badge">SACRED CELEBRATION</span>
+            </div>
 
-    #musicBtn {
-        right: 15px;
-        bottom: 15px;
+            <div class="activity-card reveal">
+                <div class="activity-date"><span class="day">20</span><span class="month">SEP</span></div>
+                <h3>Ganpati Visarjan</h3>
+                <p>Bid farewell to Bappa with gratitude, devotion and the promise of His return.</p>
+                <span class="activity-badge">GANPATI BAPPA MORYA</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-        padding: 11px 16px;
+<!-- MODAK COUNTER -->
+<section class="modak-section" id="modak">
+    <div class="container">
+        <div class="modak-card reveal">
+            <div class="modak-icon">🧄</div>
+            <h2 class="section-title" style="font-size: 2rem;">Offer A Modak</h2>
+            <p style="color: #a99d89; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; margin-top: 5px;">
+                Offer modaks to Bappa and receive His divine blessings.
+            </p>
+            <div class="modak-count-display" id="modakCount">0</div>
+            <button class="modak-btn" onclick="offerModak()">
+                🧄 Offer Modak to Bappa
+            </button>
+        </div>
+    </div>
+</section>
 
-        font-size: 11px;
-    }
+<!-- COUNTDOWN -->
+<section class="countdown-section">
+    <div class="container">
+        <h2 class="section-title reveal">Bappa Is Coming</h2>
+        <p class="section-subtitle reveal">The countdown to AARAMBH 2026 has begun.</p>
+        <div class="countdown reveal">
+            <div class="time-box"><div class="time-number" id="days">00</div><div class="time-label">DAYS</div></div>
+            <div class="time-box"><div class="time-number" id="hours">00</div><div class="time-label">HOURS</div></div>
+            <div class="time-box"><div class="time-number" id="minutes">00</div><div class="time-label">MINUTES</div></div>
+            <div class="time-box"><div class="time-number" id="seconds">00</div><div class="time-label">SECONDS</div></div>
+        </div>
+    </div>
+</section>
 
-}
-</style>
+<!-- CEREMONY TIMELINE -->
+<section class="ceremony" id="ceremony">
+    <div class="container">
+        <h2 class="section-title reveal">The Sacred Aagman</h2>
+        <p class="section-subtitle reveal">A ceremonial welcome filled with devotion, music, prayer and celebration.</p>
+        <div class="timeline">
+            <div class="timeline-item reveal"><div class="timeline-icon">🪔</div><div class="timeline-content"><h3>Gathering</h3><p>Students and members of the college family come together to begin the celebration.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-icon">🥁</div><div class="timeline-content"><h3>Ganpati Aagman</h3><p>Welcome Bappa with traditional music, chants, dhol and festive energy.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-icon">🌺</div><div class="timeline-content"><h3>Ganpati Sthapana</h3><p>Lord Ganesha is respectfully welcomed and placed at the celebration venue.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-icon">🙏</div><div class="timeline-content"><h3>Aarti & Blessings</h3><p>Come together for Ganpati Aarti and seek Bappa's blessings for the year ahead.</p></div></div>
+            <div class="timeline-item reveal"><div class="timeline-icon">🍬</div><div class="timeline-content"><h3>Prasad</h3><p>Share the joy of Bappa's arrival with blessings and prasad.</p></div></div>
+        </div>
+    </div>
+</section>
 
+<!-- QUOTE -->
+<section class="quote">
+    <div class="container reveal">
+        <div class="quote-text">“Every beautiful tradition begins with one meaningful <strong>AARAMBH.</strong>”</div>
+    </div>
+</section>
+
+<!-- VENUE -->
+<section class="venue" id="venue">
+    <div class="container">
+        <h2 class="section-title reveal">The Sacred Venue</h2>
+        <p class="section-subtitle reveal">Where our college family comes together to welcome Bappa.</p>
+        <div class="venue-card reveal">
+            <div class="venue-icon">📍</div>
+            <h3>Laxmi Narayan Mandir, RAMA MEDICAL COLLEGE</h3>
+            <p>Hapur, Uttar Pradesh<br>India</p>
+            <p style="margin-top:15px"><strong class="gold">14–20 September 2026</strong></p>
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Rama+Medical+College+Hapur" target="_blank" rel="noopener noreferrer">OPEN LOCATION</a>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+    <div class="container reveal">
+        <div class="final-symbol">ॐ</div>
+        <h2>Bring Bappa Home</h2>
+        <p>Let us come together and make "AARAMBH 2026" the beginning of a beautiful tradition that lives in our hearts for years to come.</p>
+        <div class="gold-line"></div>
+        <div class="morya">|| GANPATI BAPPA MORYA ||</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    AARAMBH 2026 &nbsp; • &nbsp; RAMA MEDICAL COLLEGE, HAPUR
+    <div class="credit">Created by @kaiwalya__ 🔱</div>
+</footer>
+
+<!-- BLESSING POPUP TOAST -->
+<div class="blessing-popup" id="blessingPopup" role="status" aria-live="polite">
+    🙏 May Bappa bless you with wisdom, happiness and success.
+</div>
+
+<!-- SCRIPTS -->
 <script>
-
-(function () {
-
     "use strict";
 
-    const music =
-        document.getElementById("bgMusic");
+    /* =====================================================
+       LOADER & INIT
+    ===================================================== */
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            const loader = document.getElementById("loader");
+            if (loader) loader.classList.add("hide");
+        }, 800);
+    });
 
-    const musicBtn =
-        document.getElementById("musicBtn");
+    /* =====================================================
+       HIGH-PERFORMANCE CANVAS PARTICLES
+    ===================================================== */
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+    let particlesArray = [];
 
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
 
-    if (!music || !musicBtn) {
-        console.error(
-            "AARAMBH Music: Audio element not found."
-        );
-        return;
+    class Particle {
+        constructor() {
+            this.reset();
+        }
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = canvas.height + Math.random() * 100;
+            this.size = Math.random() * 2 + 1;
+            this.speedY = Math.random() * 1.2 + 0.3;
+            this.opacity = Math.random() * 0.5 + 0.2;
+        }
+        update() {
+            this.y -= this.speedY;
+            if (this.y < -10) this.reset();
+        }
+        draw() {
+            ctx.fillStyle = `rgba(220, 166, 66, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
     }
 
+    function initParticles() {
+        particlesArray = [];
+        const count = Math.min(Math.floor(window.innerWidth / 25), 50);
+        for (let i = 0; i < count; i++) particlesArray.push(new Particle());
+    }
 
-    /* =========================================
-       MUSIC SETTINGS
-    ========================================= */
+    function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particlesArray.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animateParticles);
+    }
+    initParticles();
+    animateParticles();
 
-    music.volume = 0.35;
+    /* =====================================================
+       AUDIO SYSTEM (INTERACTION-FRIENDLY)
+    ===================================================== */
+    const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
 
-
-    /* =========================================
-       UPDATE BUTTON
-    ========================================= */
+    if (music) music.volume = 0.35;
 
     function updateMusicButton() {
-
+        if (!musicBtn || !music) return;
         if (!music.paused) {
-
-            musicBtn.innerHTML =
-                "🔊 <span>Music On</span>";
-
-            musicBtn.classList.add(
-                "playing"
-            );
-
+            musicBtn.innerHTML = "🔊 <span>Music On</span>";
+            musicBtn.classList.add("playing");
         } else {
-
-            musicBtn.innerHTML =
-                "🔇 <span>Enable Music</span>";
-
-            musicBtn.classList.remove(
-                "playing"
-            );
+            musicBtn.innerHTML = "🔇 <span>Enable Music</span>";
+            musicBtn.classList.remove("playing");
         }
     }
 
-
-    /* =========================================
-       START MUSIC
-    ========================================= */
-
     async function startMusic() {
-
+        if (!music) return false;
         try {
-
-            music.volume = 0.35;
-
-            const promise =
-                music.play();
-
-            if (promise !== undefined) {
-                await promise;
-            }
-
+            await music.play();
             updateMusicButton();
-
-            console.log(
-                "AARAMBH 2026 music started."
-            );
-
             return true;
-
-        }
-
-        catch (error) {
-
-            console.log(
-                "Browser blocked autoplay:",
-                error
-            );
-
+        } catch (err) {
             updateMusicButton();
-
             return false;
         }
     }
 
-
-    /* =========================================
-       TRY IMMEDIATELY
-    ========================================= */
-
-    startMusic();
-
-
-    /* =========================================
-       TRY AGAIN AFTER PAGE LOAD
-    ========================================= */
-
-    window.addEventListener(
-        "load",
-        function () {
-
-            if (music.paused) {
-                startMusic();
-            }
-
-        }
-    );
-
-
-    /* =========================================
-       TRY WHEN PAGE BECOMES VISIBLE
-    ========================================= */
-
-    document.addEventListener(
-        "visibilitychange",
-        function () {
-
-            if (
-                document.visibilityState ===
-                "visible"
-            ) {
-
-                if (music.paused) {
-                    startMusic();
-                }
-            }
-
-        }
-    );
-
-
-    /* =========================================
-       FIRST USER INTERACTION
-       REQUIRED BY MANY BROWSERS
-    ========================================= */
-
-    function firstInteraction() {
-
-        if (music.paused) {
-            startMusic();
-        }
-
-        document.removeEventListener(
-            "pointerdown",
-            firstInteraction
-        );
-
-        document.removeEventListener(
-            "keydown",
-            firstInteraction
-        );
+    function unlockAudioOnInteraction() {
+        if (music && music.paused) startMusic();
+        document.removeEventListener("pointerdown", unlockAudioOnInteraction);
+        document.removeEventListener("keydown", unlockAudioOnInteraction);
     }
 
+    document.addEventListener("pointerdown", unlockAudioOnInteraction, { passive: true });
+    document.addEventListener("keydown", unlockAudioOnInteraction);
 
-    document.addEventListener(
-        "pointerdown",
-        firstInteraction,
-        { passive: true }
-    );
-
-
-    document.addEventListener(
-        "keydown",
-        firstInteraction
-    );
-
-
-    /* =========================================
-       MUSIC BUTTON
-    ========================================= */
-
-    musicBtn.addEventListener(
-        "click",
-        async function (event) {
-
-            event.stopPropagation();
-
-            if (music.paused) {
-
-                await startMusic();
-
-            } else {
-
+    if (musicBtn) {
+        musicBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (music.paused) startMusic();
+            else {
                 music.pause();
-
                 updateMusicButton();
             }
+        });
+    }
 
+    /* =====================================================
+       DYNAMIC RANDOM BLESSINGS
+    ===================================================== */
+    const blessingsList = [
+        "🙏 May Bappa bless you with wisdom, happiness and success.",
+        "✨ Vighnaharta removal of all obstacles from your path.",
+        "🌸 Wishing you prosperity, devotion, and joy this Ganeshotsav.",
+        "🔱 May Lord Ganesha illuminate your lives with endless positivity.",
+        "🌺 Ganpati Bappa Morya! May your year ahead be blessed."
+    ];
+
+    function receiveBlessing() {
+        const popup = document.getElementById("blessingPopup");
+        if (!popup) return;
+        const randomBlessing = blessingsList[Math.floor(Math.random() * blessingsList.length)];
+        popup.textContent = randomBlessing;
+        popup.classList.add("active");
+        setTimeout(() => popup.classList.remove("active"), 3500);
+    }
+
+    /* =====================================================
+       MODAK COUNTER (WITH LOCALSTORAGE)
+    ===================================================== */
+    let modakCount = parseInt(localStorage.getItem("aarambh_modak_count")) || 108;
+    const modakDisplay = document.getElementById("modakCount");
+
+    if (modakDisplay) {
+        modakDisplay.textContent = modakCount.toLocaleString();
+    }
+
+    function offerModak() {
+        modakCount++;
+        if (modakDisplay) {
+            modakDisplay.textContent = modakCount.toLocaleString();
         }
-    );
+        localStorage.setItem("aarambh_modak_count", modakCount);
+        receiveBlessing();
+    }
 
+    /* =====================================================
+       COUNTDOWN
+    ===================================================== */
+    const eventDate = new Date("September 14, 2026 16:00:00").getTime();
 
-    /* =========================================
-       AUDIO EVENTS
-    ========================================= */
+    function updateCountdown() {
+        const now = Date.now();
+        const difference = eventDate - now;
 
-    music.addEventListener(
-        "play",
-        updateMusicButton
-    );
-
-    music.addEventListener(
-        "pause",
-        updateMusicButton
-    );
-
-
-    /* =========================================
-       ERROR DETECTION
-    ========================================= */
-
-    music.addEventListener(
-        "error",
-        function () {
-
-            musicBtn.innerHTML =
-                "⚠️ <span>Music File Missing</span>";
-
-            musicBtn.classList.remove(
-                "playing"
-            );
-
-            console.error(
-                "AARAMBH Music Error: Check ./music/aarambh.mp3"
-            );
+        if (difference <= 0) {
+            ["days", "hours", "minutes", "seconds"].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = "00";
+            });
+            return;
         }
-    );
 
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    /* =========================================
-       INITIAL BUTTON STATE
-    ========================================= */
+        document.getElementById("days").textContent = String(days).padStart(2, "0");
+        document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
 
-    updateMusicButton();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 
-})();
+    /* =====================================================
+       INTERSECTION OBSERVER & PARALLAX
+    ===================================================== */
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+    }, { threshold: 0.12 });
 
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scroll = window.scrollY;
+                const heroLeft = document.querySelector(".hero-left");
+                const heroLogo = document.querySelector(".hero-logo");
+
+                if (scroll < window.innerHeight) {
+                    if (heroLeft) heroLeft.style.transform = `translateY(${scroll * 0.08}px)`;
+                    if (heroLogo) heroLogo.style.transform = `translateY(${scroll * 0.04}px)`;
+                }
+
+                // Active section navbar toggle
+                const sections = document.querySelectorAll("section[id]");
+                let current = "";
+                sections.forEach(sec => {
+                    if (scroll >= sec.offsetTop - 200) current = sec.getAttribute("id");
+                });
+
+                document.querySelectorAll(".nav-links a").forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
+                });
+
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
 </script>
-
-<!-- =====================================================
-     LOADER
-===================================================== -->
-
-<div id="loader">
-
-    <div class="loader-symbol">
-        <span>ॐ</span>
-    </div>
-
-    <div class="loader-text">
-        ENTERING AARAMBH
-    </div>
-
-</div>
-
-
-<!-- PARTICLES -->
-
-<div id="particles"></div>
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<nav class="top-nav">
-
-
-    <div class="nav-brand">
-
-        <div class="brand-logo">
-            ॐ
-        </div>
-
-        <div class="brand-text">
-
-            <small>AARAMBH</small>
-
-            <strong>2026</strong>
-
-        </div>
-
-    </div>
-
-
-    <div class="nav-links">
-
-        <a href="#home">
-            Home
-        </a>
-
-        <a href="#ceremony">
-            Ceremony
-        </a>
-
-        <a href="#activities">
-            Activities
-        </a>
-
-        <a href="#registration">
-            Registration
-        </a>
-
-        <a href="#venue">
-            Venue
-        </a>
-
-    </div>
-
-
-    <button
-        class="blessings"
-        onclick="receiveBlessing()"
-    >
-
-        <span>🙏</span>
-
-        Receive Blessings
-
-    </button>
-
-
-</nav>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section
-    class="hero"
-    id="home"
->
-
-
-    <div class="hero-container">
-
-
-        <!-- LEFT -->
-
-        <div class="hero-left reveal">
-
-
-            <div class="college-label">
-
-                <span></span>
-
-                RAMA MEDICAL COLLEGE • HAPUR
-
-            </div>
-
-
-            <div class="sanskrit">
-
-                || श्री गणेशाय नमः ||
-
-            </div>
-
-
-            <h1 class="hero-title">
-
-                <span class="first">
-                    GANPATI
-                </span>
-
-                <span class="second">
-                    AAGMAN
-                </span>
-
-            </h1>
-
-
-            <p class="hero-description">
-
-                A sacred beginning to
-
-                <strong>AARAMBH 2026.</strong>
-
-                Join the Rama Medical College family
-                as we welcome Vighnaharta with
-                devotion, joy and togetherness.
-
-            </p>
-
-
-            <div class="event-pills">
-
-
-                <div class="event-pill">
-
-                    <span>▣</span>
-
-                    <span>
-                        14 September 2026
-                    </span>
-
-                </div>
-
-
-                <div class="event-pill">
-
-                    <span>●</span>
-
-                    <span>
-                        Rama Medical College, Hapur
-                    </span>
-
-                </div>
-
-
-                <div class="event-pill">
-
-                    <span>ॐ</span>
-
-                    <span>
-                        Ganpati Aagman
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="hero-buttons">
-
-
-                <a
-                    href="#registration"
-                    class="primary-btn"
-                >
-
-                    🙏
-
-                    Register Now
-
-                </a>
-
-
-                <a
-                    href="#activities"
-                    class="secondary-btn"
-                >
-
-                    ◷
-
-                    View Activities
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-        <!-- RIGHT LOGO -->
-
-        <div class="hero-right">
-
-
-            <div class="logo-glow"></div>
-
-            <div class="logo-ring ring-one"></div>
-
-            <div class="logo-ring ring-two"></div>
-
-
-            <!--
-                YOUR GOLDEN AARAMBH LOGO
-
-                Keep aarambh-logo.png
-                in the same folder.
-            -->
-
-            <img
-                src="aarambh-logo.png"
-                alt="AARAMBH 2026 Golden Logo"
-                class="hero-logo"
-            >
-
-
-        </div>
-
-
-    </div>
-
-
-    <div class="scroll-indicator">
-
-        <span>SCROLL</span>
-
-        <div class="scroll-line"></div>
-
-    </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     MANTRA
-===================================================== -->
-
-<div class="mantra">
-
-    || GANPATI BAPPA MORYA ||
-
-</div>
-
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section
-    class="about"
-    id="about"
->
-
-    <div class="container">
-
-
-        <h2 class="section-title reveal">
-
-            A Sacred Beginning
-
-        </h2>
-
-
-        <div class="gold-line"></div>
-
-
-        <div class="about-card reveal">
-
-
-            <p>
-
-                For all of us, Ganpati Bappa is not just
-                a festival — it is an emotion, a tradition,
-                and a beautiful reminder of home.
-
-            </p>
-
-
-            <br>
-
-
-            <p>
-
-                <span class="gold">
-                    AARAMBH 2026
-                </span>
-
-                marks the beginning of a beautiful
-                Ganeshotsav tradition at Rama Medical
-                College, Hapur.
-
-            </p>
-
-
-            <br>
-
-
-            <p>
-
-                From the arrival of Bappa to the final
-                Visarjan, let us celebrate every moment
-                with devotion, unity and joy.
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     REGISTRATION
-===================================================== -->
-
-<section
-    class="registration"
-    id="registration"
->
-
-    <div class="container">
-
-
-        <div class="registration-card reveal">
-
-
-            <div class="registration-symbol">
-                🪔
-            </div>
-
-
-            <h2>
-
-                Be A Part of Aarambh
-
-            </h2>
-
-
-            <div class="gold-line"></div>
-
-
-            <p>
-
-                Register now and be a part of
-                <strong class="gold">
-                    AARAMBH 2026
-                </strong>.
-
-                Join us in celebrating Ganpati Bappa
-                with devotion, creativity and
-                togetherness.
-
-            </p>
-
-
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfbVBMI_Y1_38JKzi2AtFIe1BvkDADPFYlqyY5q0fgwmWQ_eA/viewform?usp=publish-editor"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="register-btn"
-            >
-
-                📝
-
-                REGISTER NOW
-
-            </a>
-
-
-            <p class="registration-note">
-
-                Registration will open in a new tab.
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ACTIVITIES & EVENTS
-===================================================== -->
-
-<section
-    class="activities"
-    id="activities"
->
-
-    <div class="container">
-
-
-        <h2 class="section-title reveal">
-
-            Activities & Events
-
-        </h2>
-
-
-        <p class="section-subtitle reveal">
-
-            Seven days. One celebration.
-            Countless memories with Bappa.
-
-        </p>
-
-
-        <div class="activities-grid">
-
-
-            <!-- 14 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        14
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Ganpati Aagman
-
-                </h3>
-
-
-                <p>
-
-                    The auspicious beginning of
-                    AARAMBH 2026 as we welcome
-                    Ganpati Bappa to Rama Medical
-                    College, Hapur.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    STHAPANA
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- 15 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        15
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Rangoli Competition
-
-                </h3>
-
-
-                <p>
-
-                    Showcase creativity, colours
-                    and artistic expression through
-                    a Ganeshotsav-themed Rangoli
-                    competition.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    ALL BATCHES
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- 16 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        16
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Musical Chair
-
-                </h3>
-
-
-                <p>
-
-                    A fun-filled musical chair
-                    competition featuring
-                    15 chairs and plenty of
-                    festive energy.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    PGs & UGs • ALL BATCHES
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- 17 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        17
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Storytelling
-
-                </h3>
-
-
-                <p>
-
-                    Share stories, imagination and
-                    expressions as we celebrate the
-                    spirit of Ganpati through words.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    STORYTELLING EVENT
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- 18 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        18
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Cultural Events
-
-                </h3>
-
-
-                <p>
-
-                    An evening of dance, singing,
-                    poetry and diverse cultural
-                    performances.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    DANCE • SINGING • POETRY & MORE
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- 19 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        19
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Maha Aarti
-
-                </h3>
-
-
-                <p>
-
-                    Come together as one college
-                    family for the sacred Maha Aarti
-                    and seek Bappa's blessings.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    SACRED CELEBRATION
-
-                </span>
-
-
-            </div>
-
-
-
-            <!-- 20 SEPTEMBER -->
-
-            <div class="activity-card reveal">
-
-
-                <div class="activity-date">
-
-                    <span class="day">
-                        20
-                    </span>
-
-                    <span class="month">
-                        SEP
-                    </span>
-
-                </div>
-
-
-                <h3>
-
-                    Ganpati Visarjan
-
-                </h3>
-
-
-                <p>
-
-                    Bid farewell to Bappa with
-                    gratitude, devotion and the
-                    promise of His return.
-
-                </p>
-
-
-                <span class="activity-badge">
-
-                    GANPATI BAPPA MORYA
-
-                </span>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     COUNTDOWN
-===================================================== -->
-
-<section class="countdown-section">
-
-    <div class="container">
-
-
-        <h2 class="section-title reveal">
-
-            Bappa Is Coming
-
-        </h2>
-
-
-        <p class="section-subtitle reveal">
-
-            The countdown to AARAMBH 2026
-            has begun.
-
-        </p>
-
-
-        <div class="countdown reveal">
-
-
-            <div class="time-box">
-
-                <div
-                    class="time-number"
-                    id="days"
-                >
-                    00
-                </div>
-
-                <div class="time-label">
-                    DAYS
-                </div>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <div
-                    class="time-number"
-                    id="hours"
-                >
-                    00
-                </div>
-
-                <div class="time-label">
-                    HOURS
-                </div>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <div
-                    class="time-number"
-                    id="minutes"
-                >
-                    00
-                </div>
-
-                <div class="time-label">
-                    MINUTES
-                </div>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <div
-                    class="time-number"
-                    id="seconds"
-                >
-                    00
-                </div>
-
-                <div class="time-label">
-                    SECONDS
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CEREMONY
-===================================================== -->
-
-<section
-    class="ceremony"
-    id="ceremony"
->
-
-    <div class="container">
-
-
-        <h2 class="section-title reveal">
-
-            The Sacred Aagman
-
-        </h2>
-
-
-        <p class="section-subtitle reveal">
-
-            A ceremonial welcome filled with
-            devotion, music, prayer and celebration.
-
-        </p>
-
-
-        <div class="timeline">
-
-
-            <div class="timeline-item reveal">
-
-
-                <div class="timeline-icon">
-                    🪔
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Gathering
-                    </h3>
-
-                    <p>
-
-                        Students and members of the
-                        college family come together
-                        to begin the celebration.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="timeline-item reveal">
-
-
-                <div class="timeline-icon">
-                    🥁
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Ganpati Aagman
-                    </h3>
-
-                    <p>
-
-                        Welcome Bappa with traditional
-                        music, chants, dhol and
-                        festive energy.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="timeline-item reveal">
-
-
-                <div class="timeline-icon">
-                    🌺
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Ganpati Sthapana
-                    </h3>
-
-                    <p>
-
-                        Lord Ganesha is respectfully
-                        welcomed and placed at the
-                        celebration venue.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="timeline-item reveal">
-
-
-                <div class="timeline-icon">
-                    🙏
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Aarti & Blessings
-                    </h3>
-
-                    <p>
-
-                        Come together for Ganpati Aarti
-                        and seek Bappa's blessings for
-                        the year ahead.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="timeline-item reveal">
-
-
-                <div class="timeline-icon">
-                    🍬
-                </div>
-
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Prasad
-                    </h3>
-
-                    <p>
-
-                        Share the joy of Bappa's arrival
-                        with blessings and prasad.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-<!-- =====================================================
-     QUOTE
-===================================================== -->
-
-<section class="quote">
-
-    <div class="container reveal">
-
-
-        <div class="quote-text">
-
-            “Every beautiful tradition begins
-            with one meaningful
-
-            <strong>
-                AARAMBH.
-            </strong>”
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     VENUE
-===================================================== -->
-
-<section
-    class="venue"
-    id="venue"
->
-
-    <div class="container">
-
-
-        <h2 class="section-title reveal">
-
-            The Sacred Venue
-
-        </h2>
-
-
-        <p class="section-subtitle reveal">
-
-            Where our college family comes
-            together to welcome Bappa.
-
-        </p>
-
-
-        <div class="venue-card reveal">
-
-
-            <div class="venue-icon">
-                📍
-            </div>
-
-
-            <h3>
-
-               Laxmi Narayan Mandir, RAMA MEDICAL COLLEGE
-
-            </h3>
-
-
-            <p>
-
-                Hapur, Uttar Pradesh<br>
-                India
-
-            </p>
-
-
-            <p style="margin-top:15px">
-
-                <strong class="gold">
-
-                    14–20 September 2026
-
-                </strong>
-
-            </p>
-
-
-            <a
-                class="map-btn"
-                href="https://www.google.com/maps/search/?api=1&query=Rama+Medical+College+Hapur"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-
-                OPEN LOCATION
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
-<section class="final">
-
-    <div class="container reveal">
-
-
-        <div class="final-symbol">
-            ॐ
-        </div>
-
-
-        <h2>
-
-            Bring Bappa Home
-
-        </h2>
-
-
-        <p>
-
-            Let us come together and make
-            "AARAMBH 2026" the beginning of a
-            beautiful tradition that lives in
-            our hearts for years to come.
-
-        </p>
-
-
-        <div class="gold-line"></div>
-
-
-        <div class="morya">
-
-            || GANPATI BAPPA MORYA ||
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    AARAMBH 2026
-    &nbsp; • &nbsp;
-    RAMA MEDICAL COLLEGE, HAPUR
-
-    <div class="credit">
-
-        Created by @kaiwalya__ 🔱
-
-    </div>
-
-</footer>
-
-
-
-<!-- =====================================================
-     BLESSING POPUP
-===================================================== -->
-
-<div
-    class="blessing-popup"
-    id="blessingPopup"
->
-
-    🙏 May Bappa bless you with
-    wisdom, happiness and success.
-
-</div>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-
-/* =====================================================
-   LOADER
-===================================================== */
-
-window.addEventListener(
-    "load",
-    function(){
-
-        setTimeout(
-            function(){
-
-                document
-                    .getElementById("loader")
-                    .classList
-                    .add("hide");
-
-            },
-            1200
-        );
-
-    }
-);
-
-
-
-/* =====================================================
-   PARTICLES
-===================================================== */
-
-const particles =
-    document.getElementById("particles");
-
-
-for(
-    let i = 0;
-    i < 45;
-    i++
-){
-
-    const particle =
-        document.createElement("span");
-
-    particle.className =
-        "particle";
-
-    particle.style.left =
-        Math.random() * 100 + "%";
-
-    particle.style.animationDuration =
-        (8 + Math.random() * 16) + "s";
-
-    particle.style.animationDelay =
-        Math.random() * 10 + "s";
-
-    const size =
-        1 + Math.random() * 2;
-
-    particle.style.width =
-        size + "px";
-
-    particle.style.height =
-        size + "px";
-
-    particles.appendChild(
-        particle
-    );
-
-}
-
-
-
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
-
-const observer =
-    new IntersectionObserver(
-
-        function(entries){
-
-            entries.forEach(
-
-                function(entry){
-
-                    if(
-                        entry.isIntersecting
-                    ){
-
-                        entry
-                            .target
-                            .classList
-                            .add("show");
-
-                    }
-
-                }
-
-            );
-
-        },
-
-        {
-            threshold:.12
-        }
-
-    );
-
-
-document
-    .querySelectorAll(".reveal")
-    .forEach(
-        element =>
-            observer.observe(element)
-    );
-
-
-
-/* =====================================================
-   COUNTDOWN
-===================================================== */
-
-/*
-    AARAMBH 2026
-    START:
-    14 September 2026
-
-    Countdown target:
-    14 September 2026, 4:00 PM
-
-    Change the time below if the
-    actual Aagman ceremony has another time.
-*/
-
-const eventDate =
-    new Date(
-        "September 14, 2026 16:00:00"
-    ).getTime();
-
-
-function updateCountdown(){
-
-    const now =
-        new Date().getTime();
-
-    const difference =
-        eventDate - now;
-
-
-    if(
-        difference <= 0
-    ){
-
-        document
-            .getElementById("days")
-            .textContent = "00";
-
-        document
-            .getElementById("hours")
-            .textContent = "00";
-
-        document
-            .getElementById("minutes")
-            .textContent = "00";
-
-        document
-            .getElementById("seconds")
-            .textContent = "00";
-
-        return;
-
-    }
-
-
-    const days =
-        Math.floor(
-            difference /
-            (1000 * 60 * 60 * 24)
-        );
-
-
-    const hours =
-        Math.floor(
-            (
-                difference %
-                (1000 * 60 * 60 * 24)
-            )
-            /
-            (1000 * 60 * 60)
-        );
-
-
-    const minutes =
-        Math.floor(
-            (
-                difference %
-                (1000 * 60 * 60)
-            )
-            /
-            (1000 * 60)
-        );
-
-
-    const seconds =
-        Math.floor(
-            (
-                difference %
-                (1000 * 60)
-            )
-            /
-            1000
-        );
-
-
-    document
-        .getElementById("days")
-        .textContent =
-        String(days)
-        .padStart(2,"0");
-
-
-    document
-        .getElementById("hours")
-        .textContent =
-        String(hours)
-        .padStart(2,"0");
-
-
-    document
-        .getElementById("minutes")
-        .textContent =
-        String(minutes)
-        .padStart(2,"0");
-
-
-    document
-        .getElementById("seconds")
-        .textContent =
-        String(seconds)
-        .padStart(2,"0");
-
-}
-
-
-updateCountdown();
-
-setInterval(
-    updateCountdown,
-    1000
-);
-
-
-
-/* =====================================================
-   RECEIVE BLESSING
-===================================================== */
-
-function receiveBlessing(){
-
-    const popup =
-        document.getElementById(
-            "blessingPopup"
-        );
-
-    popup.classList.add(
-        "active"
-    );
-
-
-    setTimeout(
-        function(){
-
-            popup.classList.remove(
-                "active"
-            );
-
-        },
-        3500
-    );
-
-}
-
-
-
-/* =====================================================
-   HERO PARALLAX
-===================================================== */
-
-window.addEventListener(
-    "scroll",
-    function(){
-
-        const heroContent =
-            document.querySelector(
-                ".hero-left"
-            );
-
-        const logo =
-            document.querySelector(
-                ".hero-logo"
-            );
-
-
-        const scroll =
-            window.scrollY;
-
-
-        if(
-            scroll <
-            window.innerHeight
-        ){
-
-            heroContent.style.transform =
-                `translateY(${scroll * .08}px)`;
-
-
-            if(logo){
-
-                logo.style.transform =
-                    `translateY(${scroll * .04}px)`;
-
-            }
-
-        }
-
-    }
-);
-
-
-
-/* =====================================================
-   ACTIVE NAVIGATION
-===================================================== */
-
-const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
-
-const navLinks =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
-
-
-window.addEventListener(
-    "scroll",
-    function(){
-
-        let current = "";
-
-
-        sections.forEach(
-            function(section){
-
-                const sectionTop =
-                    section.offsetTop - 200;
-
-
-                if(
-                    window.scrollY >=
-                    sectionTop
-                ){
-
-                    current =
-                        section.getAttribute(
-                            "id"
-                        );
-
-                }
-
-            }
-        );
-
-
-        navLinks.forEach(
-            function(link){
-
-                link.style.color = "";
-
-                if(
-                    link.getAttribute(
-                        "href"
-                    ) === "#" + current
-                ){
-
-                    link.style.color =
-                        "#e2b45a";
-
-                }
-
-            }
-        );
-
-    }
-);
-
-
-</script>
-
 
 </body>
-
 </html>
