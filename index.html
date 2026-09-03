@@ -2268,7 +2268,216 @@ button:focus-visible{
 
 
 <body>
+<!-- AARAMBH 2026 Background Music -->
 
+<audio id="bgMusic" loop preload="auto">
+    <source src="music/aarambh.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<button id="musicBtn" onclick="enableMusic()">
+    🔊 <span>Enable Music</span>
+</button>
+
+<style>
+
+#musicBtn {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 9999;
+
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(220,166,66,.6);
+
+    background: rgba(12,7,3,.9);
+
+    backdrop-filter: blur(10px);
+
+    color: #e5b65b;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.4);
+
+    transition: .3s;
+}
+
+#musicBtn:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #eab74f,
+            #a86715
+        );
+
+    color: #160b02;
+
+}
+
+#musicBtn.playing {
+
+    animation: musicPulse 2s infinite;
+
+}
+
+@keyframes musicPulse {
+
+    0%,100% {
+        box-shadow:
+            0 0 0 rgba(220,166,66,0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(220,166,66,.35);
+    }
+
+}
+
+@media(max-width:600px) {
+
+    #musicBtn {
+
+        right: 15px;
+        bottom: 15px;
+
+        padding: 11px 16px;
+
+    }
+
+}
+
+</style>
+
+
+<script>
+
+const music =
+    document.getElementById("bgMusic");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+
+/* -----------------------------------------
+   TRY AUTOPLAY
+----------------------------------------- */
+
+window.addEventListener("load", () => {
+
+    music.volume = 0.35;
+
+    const playPromise = music.play();
+
+    if (playPromise !== undefined) {
+
+        playPromise
+            .then(() => {
+
+                // Autoplay allowed
+                musicBtn.innerHTML =
+                    "🔊 <span>Music On</span>";
+
+                musicBtn.classList.add("playing");
+
+            })
+            .catch(() => {
+
+                // Browser blocked autoplay
+                musicBtn.innerHTML =
+                    "🔇 <span>Enable Music</span>";
+
+            });
+
+    }
+
+});
+
+
+/* -----------------------------------------
+   ENABLE MUSIC AFTER USER TAP
+----------------------------------------- */
+
+function enableMusic() {
+
+    if (music.paused) {
+
+        music.volume = 0.35;
+
+        music.play()
+            .then(() => {
+
+                musicBtn.innerHTML =
+                    "🔊 <span>Music On</span>";
+
+                musicBtn.classList.add("playing");
+
+            });
+
+    }
+
+    else {
+
+        music.pause();
+
+        musicBtn.innerHTML =
+            "🔇 <span>Music Off</span>";
+
+        musicBtn.classList.remove("playing");
+
+    }
+
+}
+
+
+/* -----------------------------------------
+   START MUSIC ON FIRST USER INTERACTION
+----------------------------------------- */
+
+document.addEventListener(
+    "click",
+    function startMusicOnce() {
+
+        if (music.paused) {
+
+            music.volume = 0.35;
+
+            music.play()
+                .then(() => {
+
+                    musicBtn.innerHTML =
+                        "🔊 <span>Music On</span>";
+
+                    musicBtn.classList.add("playing");
+
+                })
+                .catch(() => {});
+
+        }
+
+        document.removeEventListener(
+            "click",
+            startMusicOnce
+        );
+
+    },
+    { once: true }
+);
+
+</script>
 
 <!-- =====================================================
      LOADER
